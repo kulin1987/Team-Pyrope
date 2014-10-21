@@ -5,7 +5,7 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
-using TeamPyropeBlog.WebApp.Models;
+using TeamPyropeBlog.Models;
 
 namespace TeamPyropeBlog.WebApp.Account
 {
@@ -18,15 +18,16 @@ namespace TeamPyropeBlog.WebApp.Account
             IdentityResult result = manager.Create(user, Password.Text);
             if (result.Succeeded)
             {
+                IdentityHelper.SignIn(manager, user, isPersistent: false);
+
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 //string code = manager.GenerateEmailConfirmationToken(user.Id);
-                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
+                //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id);
                 //manager.SendEmail(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>.");
 
-                IdentityHelper.SignIn(manager, user, isPersistent: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
-            else 
+            else
             {
                 ErrorMessage.Text = result.Errors.FirstOrDefault();
             }

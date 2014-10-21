@@ -4,7 +4,7 @@ using System.Web.UI;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
-using TeamPyropeBlog.WebApp.Models;
+using TeamPyropeBlog.Models;
 
 namespace TeamPyropeBlog.WebApp.Account
 {
