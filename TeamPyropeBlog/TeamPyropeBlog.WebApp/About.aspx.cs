@@ -13,5 +13,10 @@ namespace TeamPyropeBlog.WebApp
         {
 
         }
+
+        protected void TextBoxAuthor0_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
