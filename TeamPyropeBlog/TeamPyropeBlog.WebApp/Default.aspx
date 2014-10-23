@@ -62,13 +62,13 @@
             </asp:ListView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PyropeBlogConnectionString %>" SelectCommand="SELECT [Title], [PostDate], [PostContent] FROM [PostMessages] ORDER BY [PostDate] DESC"></asp:SqlDataSource>
         </p>
-        <p>
+        <%--<p>
             <asp:DataPager ID="DataPagerPosts" runat="server" PagedControlID="ListViewPosts">
                 <Fields>
                     <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowLastPageButton="True" />
                 </Fields>
             </asp:DataPager>
-        </p>
+        </p>--%>
     </div>
 
 
