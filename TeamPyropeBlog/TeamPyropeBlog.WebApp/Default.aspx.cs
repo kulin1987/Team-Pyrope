@@ -31,7 +31,7 @@ namespace TeamPyropeBlog.WebApp
         }
 
         protected string GetAuthor()
-        {         
+        {
             var currentUser = this.User.Identity.GetUserId();
             var userName = dbContext.Users.Find(currentUser);
 
@@ -44,17 +44,12 @@ namespace TeamPyropeBlog.WebApp
 
         protected bool IsEditAllowed()
         {
-            //Post currentPost = (Post) this.Page.GetDataItem();
             var currentUser = this.User.Identity.GetUserId();
             var userName = dbContext.Users.Find(currentUser);
 
-            if (userName != null)
+            if (currentUser != null)
             {
-                //Guid? currentUserId = (Guid?)currentUser.ProviderUserKey;
-                //if (currentPost.AuthorUserId == currentUserId)
-                //{
                 return true;
-                //}
             }
 
             return false;

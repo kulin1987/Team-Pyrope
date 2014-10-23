@@ -13,9 +13,9 @@
                         <div class="postContent">
                             <%# SafeEvalWithFormatting("PostContent")%>
                             <div class="postDate" style="text-align: right"><%# Eval("PostDate") %></div>
-                        <asp:Panel runat="server" style="text-align: right">
-                            <a href="Administration/EditPost.aspx?id=<%# Eval("ID")%>">[Edit]</a>
-                            <a href="Administration/DeletePost.aspx?id=<%# Eval("ID")%>">[Delete]</a>
+                        <asp:Panel runat="server" style="text-align: right" Visible="<%# IsEditAllowed()%>">
+                            <a href="User/EditPost.aspx?id=<%# Eval("ID")%>">[Edit]</a>
+                            <a href="User/DeletePost.aspx?id=<%# Eval("ID")%>">[Delete]</a>
                         </asp:Panel>
                         </div>
 
