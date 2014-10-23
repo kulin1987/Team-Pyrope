@@ -13,39 +13,12 @@ namespace TeamPyropeBlog.WebApp {
     public partial class CreatePost {
         
         /// <summary>
-        /// TextBoxAuthor control.
+        /// AddEditPostControl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxAuthor;
-        
-        /// <summary>
-        /// TextBoxTitle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxTitle;
-        
-        /// <summary>
-        /// TextBoxMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxMessage;
-        
-        /// <summary>
-        /// PostButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PostButton;
+        protected global::TeamPyropeBlog.WebApp.Controls.AddEditPostControl AddEditPostControl;
     }
 }

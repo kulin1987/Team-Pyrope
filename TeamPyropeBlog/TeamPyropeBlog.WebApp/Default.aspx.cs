@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using TeamPyropeBlog.Data;
 using Microsoft.AspNet.Identity;
-using System.Web.Security;
 
 namespace TeamPyropeBlog.WebApp
 {

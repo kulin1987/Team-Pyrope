@@ -10,13 +10,13 @@
                 <ItemTemplate>
                     <div class="post">
                         <h3 class="postTitle"><%# SafeEval("Title") + GetAuthor() %></h3>
-                        <div class="postDate"><%# Eval("PostDate") %></div>
-                       <%-- <asp:Panel runat="server" class="postActions" Visible="<%# IsEditAllowed()%>">
-                            <a href="Admin/EditPost.aspx?id=<%# Eval("PostID")%>">[Edit]</a>
-                            <a href="Admin/DeletePost.aspx?id=<%# Eval("PostID")%>">[Delete]</a>
-                        </asp:Panel>--%>
                         <div class="postContent">
                             <%# SafeEvalWithFormatting("PostContent")%>
+                            <div class="postDate" style="text-align: right"><%# Eval("PostDate") %></div>
+                        <asp:Panel runat="server" style="text-align: right">
+                            <a href="Administration/EditPost.aspx?id=<%# Eval("ID")%>">[Edit]</a>
+                            <a href="Administration/DeletePost.aspx?id=<%# Eval("ID")%>">[Delete]</a>
+                        </asp:Panel>
                         </div>
 
 <%--                        <div class="postComments">
@@ -60,7 +60,7 @@
                     </div>
                 </ItemTemplate>
             </asp:ListView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PyropeBlogConnectionString %>" SelectCommand="SELECT [Title], [PostDate], [PostContent] FROM [PostMessages] ORDER BY [PostDate] DESC"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PyropeBlogConnectionString %>" SelectCommand="SELECT [ID], [Title], [PostDate], [PostContent], [UserID] FROM [PostMessages] ORDER BY [PostDate] DESC"></asp:SqlDataSource>
         </p>
         <%--<p>
             <asp:DataPager ID="DataPagerPosts" runat="server" PagedControlID="ListViewPosts">
