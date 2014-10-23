@@ -1,5 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="AddEditPostControl.ascx.cs" Inherits="TeamPyropeBlog.WebApp.Controls.AddEditPostControl" %>
 
+<%@ Register assembly="CKEditor.NET" namespace="CKEditor.NET" tagPrefix="CKEditor" %>
+
+
 <div>
     <table>
         <tr class="postTable">
@@ -23,7 +26,7 @@
             <td>Message:
             </td>
             <td>
-                <asp:TextBox ID="TextBoxMessage" runat="server" Height="126px" TextMode="MultiLine" Width="440px"></asp:TextBox>
+                <CKEditor:CKEditorControl ID="TextBoxMessage" runat="server"></CKEditor:CKEditorControl>
                 <p>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorMessage" runat="server" ControlToValidate="TextBoxMessage" ErrorMessage="Message should not be empty!" ForeColor="Red"></asp:RequiredFieldValidator>
                 </p>
@@ -31,7 +34,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="PostButton" runat="server" Text="Post Message"/>
+                <asp:Button ID="PostButton" runat="server" Text="Save"/>
             </td>
         </tr>
     </table>

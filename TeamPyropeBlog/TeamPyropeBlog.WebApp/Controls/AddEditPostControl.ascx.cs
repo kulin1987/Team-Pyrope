@@ -7,9 +7,22 @@
     using Microsoft.AspNet.Identity;
     using System.Web.Security;
 
-    public partial class AddEditPostControl : System.Web.UI.UserControl
+    public partial class AddEditPostControl : UserControl
     {
         PyropeBlogDbContext dbContext = new PyropeBlogDbContext();
+
+        public string PostAuthor
+        {
+            get
+            {
+                return this.TextBoxAuthor.Text;
+            }
+
+            set
+            {
+                this.TextBoxAuthor.Text = value;
+            }
+        }
 
         public string PostTitle
         {

@@ -1021,7 +1021,7 @@
     <Content Include="ckeditor\samples\sample_posteddata.php" />
     <Content Include="ckeditor\skins\moono\readme.md" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Post\Create.aspx" />
+    <Content Include="User\Create.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ckeditor\skins\office2003\dialog.css" />
@@ -1241,11 +1241,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Post\Create.aspx.cs">
+    <Compile Include="User\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Post\Create.aspx.designer.cs">
+    <Compile Include="User\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
