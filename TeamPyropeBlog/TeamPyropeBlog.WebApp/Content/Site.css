@@ -47,4 +47,5 @@ input[type="select"] {
     width: 100%;
     word-wrap: break-word;
     padding-bottom: 15px;
+    border-bottom: 1px solid black;
 }

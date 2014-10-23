@@ -148,6 +148,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controls\AddEditPostControl.ascx" />
     <Content Include="CreatePost.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -1205,6 +1206,13 @@
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controls\AddEditPostControl.ascx.cs">
+      <DependentUpon>AddEditPostControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddEditPostControl.ascx.designer.cs">
+      <DependentUpon>AddEditPostControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="CreatePost.aspx.cs">
       <DependentUpon>CreatePost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1264,7 +1272,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Administration\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TeamPyropeBlog.Data\TeamPyropeBlog.Data.csproj">
       <Project>{af17f3db-ef5c-4d81-832a-7a9c0f5850ec}</Project>

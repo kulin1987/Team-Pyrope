@@ -1,33 +1,11 @@
 ﻿<%@ Page Title="CreatePost" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreatePost.aspx.cs" Inherits="TeamPyropeBlog.WebApp.CreatePost" %>
 
+<%@ Register src="~/Controls/AddEditPostControl.ascx" tagname="AddEditPostControl" tagprefix="uc1" %>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2>NEW POST</h2>
-    <table>
-        <tr class="postTable">
-            <td>Author:
-            </td>
-            <td>
-                <asp:TextBox ID="TextBoxAuthor" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr class="postTable">
-            <td>Title:
-            </td>
-            <td>
-                <asp:TextBox ID="TextBoxTitle" runat="server"></asp:TextBox>
-            </td>
-        </tr>
-        <tr class="postTable">
-            <td>Message:
-            </td>
-            <td>
-                <asp:TextBox ID="TextBoxMessage" runat="server" Height="126px" TextMode="MultiLine" Width="440px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Button ID="PostButton" runat="server" Text="Post Message" OnClick="PostButton_Click" />
-            </td>
-        </tr>
-    </table>
+
+    <uc1:AddEditPostControl ID="AddEditPostControl" runat="server" OnSubmitButtonClick="AddEditPostControl_SubmitButtonClick" />
+    
+
 </asp:Content>
