@@ -1086,6 +1086,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="User\DeletePost.aspx" />
     <Content Include="User\EditPost.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
@@ -1267,6 +1268,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="User\DeletePost.aspx.cs">
+      <DependentUpon>DeletePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\DeletePost.aspx.designer.cs">
+      <DependentUpon>DeletePost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\EditPost.aspx.cs">
       <DependentUpon>EditPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
