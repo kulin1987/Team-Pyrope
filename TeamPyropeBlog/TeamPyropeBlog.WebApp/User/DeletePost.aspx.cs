@@ -13,10 +13,14 @@
         protected void Page_Load(object sender, EventArgs e)
         {
             string postIdParam = Request.Params["id"];
-            var postId = Int32.Parse(postIdParam);
-            var post = this.dbContext.Posts.SingleOrDefault(p => p.ID == postId);
-            this.dbContext.Posts.Remove(post);
-            this.dbContext.SaveChanges();
+            int postId;
+            if (Int32.TryParse(postIdParam, out postId))
+            {
+                var post = this.dbContext.Posts.SingleOrDefault(p => p.ID == postId);
+                this.dbContext.Posts.Remove(post);
+                this.dbContext.SaveChanges();
+            }
+
             this.Response.Redirect("~/Default.aspx");
         }
     }
