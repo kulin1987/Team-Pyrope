@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TeamPyropeBlog.WebApp._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    
     <div class="jumbotron">
         <h1>Team Pyrope Blog</h1>
         <p>
@@ -11,7 +11,7 @@
                     <div class="post">
                         <h3 class="postTitle"><%# SafeEval("Title") + GetAuthor() %></h3>
                         <div class="postContent">
-                            <%# SafeEvalWithFormatting("PostContent")%>
+                            <%# Eval("PostContent")%>
                             <div class="postDate" style="text-align: right"><%# Eval("PostDate") %></div>
                         <asp:Panel runat="server" style="text-align: right" Visible="<%# IsEditAllowed()%>">
                             <a href="User/EditPost.aspx?id=<%# Eval("ID")%>">[Edit]</a>
