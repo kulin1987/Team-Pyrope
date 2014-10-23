@@ -10,7 +10,7 @@ public class Upload : IHttpHandler {
 	string CKEditorFuncNum = context.Request["CKEditorFuncNum"];
 	string file = System.IO.Path.GetFileName(uploads.FileName);
 	uploads.SaveAs(context.Server.MapPath(".") + "\\Images\\" + file);
-	string url = "/CKeditorDemo/Images/" + file;
+	string url = "/Images/" + file;
 	context.Response.Write("<script>window.parent.CKEDITOR.tools.callFunction(" + CKEditorFuncNum + ", \"" + url + "\");</script>");
 	context.Response.End();            
 }
