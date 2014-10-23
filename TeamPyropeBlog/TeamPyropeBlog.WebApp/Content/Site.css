@@ -41,3 +41,10 @@ input[type="select"] {
 .postTable td{
     padding-bottom: 10px;
 }
+
+.post .postContent
+{
+    width: 100%;
+    word-wrap: break-word;
+    padding-bottom: 15px;
+}

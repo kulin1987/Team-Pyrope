@@ -1,0 +1,1 @@
+DO NOT RUN THE APP FROM Default.aspx page if you don't have a PyropeBlog DB generated in your SQL.

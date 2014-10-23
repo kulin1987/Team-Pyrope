@@ -27,33 +27,42 @@ namespace TeamPyropeBlog.Data.Migrations
                 manager.Create(role);
             }
 
-            if (!context.Roles.Any(r => r.Name == "ServiceOwner"))
+            if (!context.Roles.Any(r => r.Name == "Owner"))
             {
                 var store = new RoleStore<IdentityRole>(context);
                 var manager = new RoleManager<IdentityRole>(store);
-                var role = new IdentityRole { Name = "ServiceOwner" };
+                var role = new IdentityRole { Name = "Owner" };
 
                 manager.Create(role);
             }
 
-            if (!context.Users.Any(u => u.UserName == "admin@car.rec"))
+            if (!context.Users.Any(u => u.UserName == "admin@blog.bg"))
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                var user = new ApplicationUser { UserName = "admin@car.rec" };
+                var user = new ApplicationUser { UserName = "admin@blog.bg" };
 
                 manager.Create(user, "123456");
                 manager.AddToRole(user.Id, "Administrator");
             }
 
-            if (!context.Users.Any(u => u.UserName == "emk33@emk33.com"))
+            if (!context.Users.Any(u => u.UserName == "boss@blog.bg"))
             {
                 var store = new UserStore<ApplicationUser>(context);
                 var manager = new UserManager<ApplicationUser>(store);
-                var user = new ApplicationUser { UserName = "emk33@emk33.com" };
+                var user = new ApplicationUser { UserName = "boss@blog.bg" };
 
                 manager.Create(user, "123456");
-                manager.AddToRole(user.Id, "ServiceOwner");
+                manager.AddToRole(user.Id, "Owner");
+            }
+
+            if (!context.Users.Any(u => u.UserName == "venci@abv.bg"))
+            {
+                var store = new UserStore<ApplicationUser>(context);
+                var manager = new UserManager<ApplicationUser>(store);
+                var user = new ApplicationUser { UserName = "venci@abv.bg" };
+
+                manager.Create(user, "123456");
             }
         }
     }
