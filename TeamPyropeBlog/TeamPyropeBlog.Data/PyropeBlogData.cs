@@ -26,6 +26,22 @@
             }
         }
 
+        public IRepository<PostMessage> Posts
+        {
+            get
+            {
+                return this.GetRepository<PostMessage>();
+            }
+        }
+
+        public IRepository<Comment> Comments
+        {
+            get
+            {
+                return this.GetRepository<Comment>();
+            }
+        }
+
         public int SaveChanges()
         {
             return this.context.SaveChanges();

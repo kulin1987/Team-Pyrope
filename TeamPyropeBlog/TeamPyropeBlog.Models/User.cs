@@ -5,6 +5,7 @@
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using System.Collections.Generic;
 
     public class ApplicationUser : IdentityUser
     {

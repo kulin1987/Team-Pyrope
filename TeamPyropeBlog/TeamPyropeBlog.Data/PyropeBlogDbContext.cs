@@ -15,6 +15,10 @@
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<PyropeBlogDbContext, Configuration>());
         }
 
+        public virtual IDbSet<PostMessage> Posts { get; set; }
+
+        public virtual IDbSet<Comment> Comments { get; set; }
+
         public static PyropeBlogDbContext Create()
         {
             return new PyropeBlogDbContext();

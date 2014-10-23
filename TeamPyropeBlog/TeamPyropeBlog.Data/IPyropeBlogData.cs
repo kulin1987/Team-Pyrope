@@ -5,7 +5,11 @@
 
     interface IPyropeBlogData
     {
-        IRepository<ApplicationUser> Users { get; } 
+        IRepository<ApplicationUser> Users { get; }
+
+        IRepository<PostMessage> Posts { get; }
+
+        IRepository<Comment> Comments { get; } 
 
         int SaveChanges();
     }

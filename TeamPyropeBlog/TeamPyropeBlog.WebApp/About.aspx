@@ -26,7 +26,7 @@
         </tr>
         <tr>
             <td>
-                <asp:Button ID="Post" runat="server" Text="Post Message" />
+                <asp:Button ID="PostButton" runat="server" Text="Post Message" OnClick="PostButton_Click" />
             </td>
         </tr>
     </table>
