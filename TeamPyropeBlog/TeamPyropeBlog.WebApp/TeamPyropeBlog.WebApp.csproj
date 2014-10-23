@@ -148,6 +148,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="upload.ashx" />
     <Content Include="Controls\AddEditPostControl.ascx" />
     <Content Include="CreatePost.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />

@@ -2,6 +2,11 @@
 
 <%@ Register assembly="CKEditor.NET" namespace="CKEditor.NET" tagPrefix="CKEditor" %>
 
+<script type="text/javascript">
+    $(function () {
+        CKEDITOR.replace('<%=TextBoxMessage.ClientID %>', { filebrowserImageUploadUrl: '/Upload.ashx' });
+    });
+</script>
 
 <div>
     <table>
@@ -9,7 +14,7 @@
             <td>Author:
             </td>
             <td>
-                <asp:TextBox ID="TextBoxAuthor" runat="server"></asp:TextBox>
+                <asp:Label ID="TextBoxAuthor" runat="server"></asp:Label>
             </td>
         </tr>
         <tr class="postTable">
