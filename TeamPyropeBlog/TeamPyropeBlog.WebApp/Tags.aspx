@@ -21,7 +21,7 @@
                                     <div id="tags"> Tags: 
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:HyperLink runat="server" NavigateUrl='<%# "Tags/" + Eval("Name") %>' Text='<%# Eval("Name") %>'></asp:HyperLink>
+                                    <asp:HyperLink runat="server" NavigateUrl='<%# "Tags?tag=" + Eval("Name") %>' Text='<%# Eval("Name") %>'></asp:HyperLink>
                                 </ItemTemplate>
                                 <FooterTemplate>
                                     </div>
