@@ -6,7 +6,7 @@
     using TeamPyropeBlog.Data.Repositories;
     using TeamPyropeBlog.Models;
 
-    class PyropeBlogData : IPyropeBlogData
+    public class PyropeBlogData : IPyropeBlogData
     {
         
         private DbContext context;

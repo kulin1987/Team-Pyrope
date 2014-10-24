@@ -48,7 +48,7 @@ input[type="select"] {
     word-wrap: break-word;
 }
 
-.post .postComments
+.post .postSeparator
 {
     width: 100%;
     padding-bottom: 15px;

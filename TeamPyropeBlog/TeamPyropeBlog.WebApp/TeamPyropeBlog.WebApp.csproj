@@ -148,7 +148,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administration\Admin.Master" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\core.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\list.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\path.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="upload.ashx" />
+    <Content Include="Administration\content\css\bootstrap.min.css" />
+    <Content Include="Administration\content\css\metisMenu.min.css" />
+    <Content Include="Administration\content\css\sb-admin-2.css" />
+    <Content Include="Administration\content\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="Administration\content\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Administration\content\js\bootstrap.min.js" />
+    <Content Include="Administration\content\js\jquery-1.11.0.js" />
+    <Content Include="Administration\content\js\plugins\metisMenu\metisMenu.min.js" />
+    <Content Include="Administration\content\js\sb-admin-2.js" />
+    <Content Include="Administration\Default.aspx" />
+    <Content Include="Administration\List.aspx" />
     <Content Include="Controls\AddEditPostControl.ascx" />
     <Content Include="CreatePost.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
@@ -1210,6 +1257,27 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administration\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controls\AddEditPostControl.ascx.cs">
       <DependentUpon>AddEditPostControl.ascx</DependentUpon>
@@ -1298,9 +1366,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Administration\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TeamPyropeBlog.Data\TeamPyropeBlog.Data.csproj">
       <Project>{af17f3db-ef5c-4d81-832a-7a9c0f5850ec}</Project>

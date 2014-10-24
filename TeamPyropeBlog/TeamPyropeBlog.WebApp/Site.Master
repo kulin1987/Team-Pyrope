@@ -52,6 +52,20 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/User/Create">Create post</a></li>
+                         <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Administrator">
+                                    <ContentTemplate>
+                                        <li><a runat="server" href="/Administration">Admin Panel</a></li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                                <asp:RoleGroup Roles="Owner">
+                                    <ContentTemplate>
+                                        <li><a runat="server" href="#">Owner Page</a></li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>

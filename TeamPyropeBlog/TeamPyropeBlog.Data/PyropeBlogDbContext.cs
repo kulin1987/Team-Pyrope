@@ -25,6 +25,10 @@
         {
             return new PyropeBlogDbContext();
         }
-        
+
+        public new IDbSet<TEntity> Set<TEntity>() where TEntity : class
+        {
+            return base.Set<TEntity>();
+        }
     }
 }
