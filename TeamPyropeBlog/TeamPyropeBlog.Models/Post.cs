@@ -6,6 +6,7 @@
     public class PostMessage
     {
         private ICollection<Comment> comments;
+        private ICollection<Tag> tags { get; set; }
 
         public PostMessage()
         {
@@ -36,5 +37,19 @@
                 this.comments = value;
             }
         }
+
+        public virtual ICollection<Tag> Tags 
+        {
+            get
+            {
+                return this.tags;
+            }
+
+            set
+            {
+                this.tags = value;
+            }
+        }
+
     }
 }

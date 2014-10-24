@@ -17,6 +17,17 @@
                             <a href="User/EditPost.aspx?id=<%# Eval("ID")%>">[Edit]</a>
                             <a href="User/DeletePost.aspx?id=<%# Eval("ID")%>">[Delete]</a>
                         </asp:Panel>
+                            <asp:Repeater runat="server" DataSource='<%# GetPostTags(Eval("ID")) %>' ID="TagsRepeater">
+                                <HeaderTemplate>
+                                    <div id="tags"> <em>Tags: </em>
+                                </HeaderTemplate>
+                                <ItemTemplate>
+                                    <asp:HyperLink runat="server" CssClass="btn btn-sm" NavigateUrl='<%# "Tags?tag=" + Eval("Name") %>' Text='<%# Eval("Name") %>'></asp:HyperLink>
+                                </ItemTemplate>
+                                <FooterTemplate>
+                                    </div>
+                                </FooterTemplate>
+                            </asp:Repeater>
                         </div>
 
 <%--                        <div class="postComments">

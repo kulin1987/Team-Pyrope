@@ -1,21 +1,31 @@
 ﻿using System;
-using System.Linq;
-using System.Web.UI;
-using TeamPyropeBlog.Data;
-using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
-using TeamPyropeBlog.Models;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
+using TeamPyropeBlog.Data;
+using TeamPyropeBlog.Models;
+using Microsoft.AspNet.Identity;
 
 namespace TeamPyropeBlog.WebApp
 {
-    public partial class _Default : Page
+    public partial class Tags : System.Web.UI.Page
     {
         PyropeBlogDbContext dbContext = new PyropeBlogDbContext();
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        protected void lvPostsByTag_Load(object sender, EventArgs e)
+        {
+            var lv = (ListView)sender;
+            var a = Request.QueryString;
+            var tag = Request.QueryString["tag"];
+            var postsToShow = dbContext.Posts.Where(p => p.Tags.Any(t => t.Name.ToLower() == tag.ToLower())).ToList();
+            lv.DataSource = postsToShow;
+            lv.DataBind();
         }
 
         protected string SafeEval(string property)
@@ -63,7 +73,6 @@ namespace TeamPyropeBlog.WebApp
             var id = int.Parse(postId.ToString());
             var tags = dbContext.Posts.Where(p => p.ID == id).Select(p => p.Tags).FirstOrDefault();
 
-           // return new List<Tag>();
             return tags;
         }
     }

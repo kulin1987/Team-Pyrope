@@ -19,6 +19,8 @@
 
         public virtual IDbSet<Comment> Comments { get; set; }
 
+        public virtual IDbSet<Tag> Tags { get; set; }
+
         public static PyropeBlogDbContext Create()
         {
             return new PyropeBlogDbContext();
